@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Classificação de Heróis</title>
+</head>
+<body>
+  <h1>Verifique o console para ver os níveis dos heróis 🦸‍♂️</h1>
+
+  <script>
+    // Lista de heróis com seus respectivos XP
+    let herois = [
+      { nome: "Felipe", xp: 8500 },
+      { nome: "Luna", xp: 1200 },
+      { nome: "Kael", xp: 999 },
+      { nome: "Zara", xp: 10001 },
+      { nome: "Thorne", xp: 7000 }
+    ];
+
+    // Laço de repetição para classificar cada herói
+    for (let i = 0; i < herois.length; i++) {
+      let nome = herois[i].nome;
+      let xp = herois[i].xp;
+      let nivel = "";
+
+      if (xp < 1000) {
+        nivel = "Ferro";
+      } else if (xp >= 1001 && xp <= 2000) {
+        nivel = "Bronze";
+      } else if (xp >= 2001 && xp <= 5000) {
+        nivel = "Prata";
+      } else if (xp >= 5001 && xp <= 7000) {
+        nivel = "Ouro";
+      } else if (xp >= 7001 && xp <= 8000) {
+        nivel = "Platina";
+      } else if (xp >= 8001 && xp <= 9000) {
+        nivel = "Ascendente";
+      } else if (xp >= 9001 && xp <= 10000) {
+        nivel = "Imortal";
+      } else {
+        nivel = "Radiante";
+      }
+
+      console.log(`O Herói de nome ${nome} está no nível de ${nivel}`);
+    }
+  </script>
+</body>
+</html>
